@@ -1,15 +1,27 @@
-var max=10;
-var holder1 = 1;
-var holder2 = 2;
+var max=4000000;
+var num1 = 1;
+var num2 = 2;
+var fiboNumbers=[1,2];
 var sum=0;
+var evenSum=0;
 
-var fibonacci = function()
-{
+var evenFibonacci = function()
+{	
 	for(var i=2; i < max; i++ )
-	{
-		sum = (holder1 + holder2);
-		holder1 = holder2;
-		holder2 = sum;		
+	{   
+		//generate fibonacci numbers
+		sum = (num1 + num2);
+		fiboNumbers.push(sum);
+		num1 = num2;
+		num2 = sum;		
 	}
-	console.log(sum);
+	//add the sum of even fibonacci numbers
+	for(i=0; i < fiboNumbers.length; i++)
+	{
+		if( (fiboNumbers[i] % 2) === 0 )
+		{
+			evenSum += fiboNumber[i];
+		}
+	}
+	console.log(evenSum);
 }

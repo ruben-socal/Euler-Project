@@ -25,5 +25,5 @@ var largestFactor = function()
 			}
 		}
 	}	     
-	console.log(primefactor);
+	console.log(primeFactor);
 };

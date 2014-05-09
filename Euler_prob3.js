@@ -1,12 +1,11 @@
 var max=10000;
-var primeNumbers = [2,3,5,7];
-var hits=[];
-var largeFactor=600851475143;
+var largeNumber=600851475143;
 var primeFactor=0;
 
 var largestFactor = function()
 {
-	//generate prime numbers
+    //generate prime numbers
+	//add prime that divides into largeNumber to primefactor 
 	for(var i=4; i < max; i++ )
 	{
 		if( (i % 2) !== 0)
@@ -17,23 +16,14 @@ var largestFactor = function()
 				{
 					if( (i % 7) !== 0)
 					{
-						primeNumbers.push(i);						
+						if( (largeNumber % i) === 0)
+                    	{
+			                primeFactor = i;			
+		                }						
 					}
 				}
 			}
 		}
-	}
-	//find prime factors that divided into large number
-	for( i=0; i < primeNumbers.length; i++ )
-	{
-		if( (largeFactor % primeNumbers[i]) === 0)
-		{
-			hits.push(primeNumbers[i]);			
-		}
-	}
-
-	var largest = hits[hits.length-1];  
-     
-	console.log(largest);
-
-}
+	}	     
+	console.log(primefactor);
+};

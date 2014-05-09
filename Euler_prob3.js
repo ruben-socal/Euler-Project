@@ -4,7 +4,7 @@ var primeFactor=0;
 
 var largestFactor = function()
 {
-    //generate prime numbers
+	//generate prime numbers
 	//add prime that divides into largeNumber to primefactor 
 	for(var i=4; i < max; i++ )
 	{
@@ -17,9 +17,9 @@ var largestFactor = function()
 					if( (i % 7) !== 0)
 					{
 						if( (largeNumber % i) === 0)
-                    	{
-			                primeFactor = i;			
-		                }						
+						{
+							primeFactor = i;			
+						}						
 					}
 				}
 			}
